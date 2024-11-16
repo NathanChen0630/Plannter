@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="create_task.css">
+    <title>Plannter</title>
+</head>
+
+<body>
+    <iframe src="index.html" style="display:none;"></iframe>
+
+    <h2>Add Tasks to Flower Bud</h2>
+    <div id="budDetails"></div>
+
+    <!-- New wrapper for form and task list -->
+    <div class="content-wrapper">
+        <img id="flowerImage" class="flower-image" src="" alt="Flower Bud">
+        
+        <div class="task-form">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" placeholder="Task name" maxlength="20" required><br>
+
+            <label for="taskDescription">Task Description:</label>
+            <textarea id="taskDescription" placeholder="Enter task description" rows="4" maxlength="350" required></textarea><br>
+            <small id="charCount">350 characters remaining</small><br>
+
+            <button id="addTaskButton">Add</button>
+            <button style="margin-left: 170px;">Delete</button>
+
+        </div>
+
+        <div class="task-list">
+            <h3>Tasks for this Flower Bud:</h3>
+            <ul id="taskList"></ul>
+            <img id = "scroll" src="images/paper scroll.webp">
+        </div>
+    </div>
+    
+    
+    <img id = "VineHeart" src="images/green-heart.png">
+    
+    
+    <button type="button" id="select_button">Finish</button>
+    <a href="bud.html"><button type="button" id="select_button" style="position: absolute; bottom: 100px; left: 270px;">Change</button></a>
+
+    <script src="create_task.js"></script>
+
+</body>
+</html>
+
+
+

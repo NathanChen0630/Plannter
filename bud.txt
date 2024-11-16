@@ -1,0 +1,167 @@
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 40 stretch;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    background-image: url(images/soil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 100px;
+    height: 100vh;
+    width: 100vw;
+}
+
+#task {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    padding: 15px;
+    border: 2px solid #d4af37; /* Gold border */
+    border-radius: 8px;
+    background-color: #fdf5e6; /* Light cream background */
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    font-family: cursive;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    z-index: 10; /* Keep above other elements */
+}
+
+#taskList {
+    list-style-type: none; /* Removes the bullet points */
+    padding-left: 0; /* Removes the default padding */
+}
+#taskList li{
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+#taskList li:hover{
+    transform: scale(1.2);
+}
+
+#select_button {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+#select_button:hover{
+    transform: scale(1.1);
+}
+
+#dirtPot {
+    height: 250px;
+    width: 400px;
+    z-index: 2;
+    position: absolute;
+    bottom: 35px; /* Position 20px from the bottom, you can adjust this */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes drop {
+    0% {
+        transform: translate(-50%, -100px); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+#flowerImage {
+    position: absolute; /* Position it absolutely above the dirt pot */
+    bottom: 200px; /* Ensure it's above the pot */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 150px; /* Default size */
+    height: 150px; /* Default size */
+}
+
+.description-box {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    right: 180px;
+    top: 150px;
+    font-family:cursive;
+    font-size: 15px;
+    z-index: 3;
+    display: none;
+    border-radius: 8px;
+    overflow: hidden; /* Prevents text from going outside the box */
+    text-overflow: ellipsis; /* Adds "..." for overflowing text */
+    word-wrap: break-word; /* Breaks long words to fit within the width */
+    line-height: 1.4; /* Controls spacing between lines */
+}
+
+.complete-task-button{
+    font-family: cursive;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.complete-task-button:hover {
+    background-color: rgb(50, 140, 70); /* Optional: Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.complete-task-button:disabled {
+    background-color: rgb(140, 140, 140); /* Faded color when disabled */
+    cursor: not-allowed;
+    color: rgba(255, 255, 255, 0.7); /* Faded text color when disabled */
+}
+
+#scroll{
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    right: 120px;
+    z-index: -1;
+}
+
+#gardenButton{
+    position: absolute;
+    bottom: 50px;
+    z-index: 4;
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+#gardenButton:hover{
+    transform: scale(1.1);
+}
+

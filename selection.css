@@ -1,0 +1,179 @@
+/* Base styles */
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 30 stretch;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/soil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 50px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    color: rgb(30, 188, 72);
+    font-size: 3vw;
+    margin-bottom: 15px;
+    background-image: url("images/plaque-gold.png");
+    background-position: center;
+    background-size: cover;
+    padding: 4vw;
+    text-shadow: 3px 3px 0px rgb(81, 73, 0);
+    max-width: 80%;
+}
+
+/* Paragraph Styling */
+/* p {
+    color: rgb(255, 236, 67);
+    text-align: center;
+    font-size: 1.5vw;
+    position: absolute;
+    bottom: 10px;
+} */
+
+/* Button Styling */
+button {
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 1.5vw;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Element Positioning */
+.hanging-right,
+.hanging-left {
+    position: absolute;
+    top: 20px;
+    z-index: -1;
+}
+
+.hanging-right {
+    right: 100px;
+    transform: scaleX(-1);
+}
+
+.hanging-left {
+    left: 100px;
+}
+
+.gold-decor,
+.gold-decor2 {
+    position: absolute;
+    top: 20px;
+}
+
+.gold-decor {
+    left: 20px;
+    transform: rotate(90deg);
+}
+
+.gold-decor2 {
+    right: 20px;
+    transform: rotate(270deg);
+}
+
+/* Flower Decorations */
+.pink-flower-right,
+.pink-flower-left {
+    position: absolute;
+    bottom: 80px;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+.pink-flower-right {
+    right: 400px;
+    transform: scaleX(-1);
+    animation-name: rotateImage;
+}
+
+.pink-flower-left {
+    left: 400px;
+    animation-name: rotateImage2;
+}
+
+/* Keyframes for Rotations */
+@keyframes rotateImage {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes rotateImage2 {
+    from { transform: rotate(0deg) scaleX(-1); }
+    to { transform: rotate(360deg) scaleX(-1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+        padding: 1.5vw;
+    }
+
+    p {
+        font-size: 1.8vw;
+    }
+
+    button {
+        font-size: 2vw;
+        width: 180px;
+        height: 40px;
+    }
+
+    .hanging-right, .hanging-left {
+        top: 10px;
+    }
+
+    .pink-flower-right, .pink-flower-left {
+        bottom: 50px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+        padding: 1.5vw;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+    button {
+        font-size: 3vw;
+        width: 150px;
+        height: 40px;
+    }
+
+    .hanging-right, .hanging-left {
+        top: 5px;
+    }
+
+    .pink-flower-right, .pink-flower-left {
+        bottom: 30px;
+        width: 100px;
+    }
+}
+

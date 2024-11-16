@@ -1,0 +1,181 @@
+/* Base styles */
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 30 stretch;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    background-image: url(images/soil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 75px;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#playPauseButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#playPauseButton:hover {
+    background-color: #45a049;
+}
+
+#music {
+    z-index: 2;
+    width: 20px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.pink-flower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Position adjustments */
+.gold-decor {
+    position: absolute;
+    top: 0;
+    left: 350px;
+    transform: rotate(90deg);
+}
+
+.gold-decor2 {
+    position: absolute;
+    top: 0;
+    right: 350px;
+    transform: rotate(270deg);
+}
+
+.pot-right,
+.pot-left {
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+.pot-right {
+    right: 75px;
+    animation-name: rotateImage;
+}
+
+.pot-left {
+    left: 75px;
+    animation-name: rotateImage2;
+}
+
+/* Keyframes for animation */
+@keyframes rotateImage {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotateImage2 {
+    from {
+        transform: rotate(0deg) scaleX(-1);
+    }
+    to {
+        transform: rotate(360deg) scaleX(-1);
+    }
+}
+
+/* Title and Text */
+h1 {
+    position: absolute;
+    font-size: 8vw;
+    color: rgb(69, 164, 93);
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(252, 148, 226, 0.249);
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+}
+
+#startbutton {
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 3vw;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 20vw;
+    height: 10vh;
+    transition: transform 0.3s ease;
+}
+
+#startbutton:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #startbutton {
+        font-size: 4vw;
+        width: 30vw;
+        height: 8vh;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    .pot-left, .pot-right {
+        top: 10px;
+        width: 200px;
+    }
+
+    .gold-decor, .gold-decor2 {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+    }
+
+    #music {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #startbutton {
+        font-size: 5vw;
+        width: 40vw;
+        height: 10vh;
+    }
+
+    h1 {
+        font-size: 12vw;
+    }
+
+    .pot-left, .pot-right {
+        width: 150px;
+    }
+}

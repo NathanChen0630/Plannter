@@ -1,0 +1,181 @@
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 30 stretch; 
+    box-sizing: border-box;
+    background-image: url(images/soil.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 75px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Center the heading at the top */
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: black;
+}
+
+/* Wrapper to align the flower image, task form, and task list */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    position: relative; /* Set relative to align the scroll behind the task list */
+}
+
+/* Center and position the scroll image behind the task list */
+#scroll {
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    top: 0px; /* Adjust top to align with the task list */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset to center it perfectly */
+    z-index: -1; /* Send the scroll image behind other elements */
+}
+
+/* Flower image styling */
+.flower-image {
+    flex: 0 0 250px;
+    height: 350px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+/* Task form styling */
+.task-form {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+}
+
+.task-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.task-form input,
+.task-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.task-form button {
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.task-form button:hover {
+    transform: scale(1.1);
+}
+
+/* Task list styling */
+.task-list {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    position: relative; /* Position relative to align with scroll */
+    z-index: 1; /* Ensure task list stays above the scroll */
+}
+
+#taskList li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    padding-right: 25px;
+}
+
+/* Styling for the "Finish" and "Change" buttons */
+#select_button {
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+#select_button:hover {
+    transform: scale(1.1);
+}
+
+/* VineHeart image positioning */
+#VineHeart {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    height: 350px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .flower-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 80%;
+        height: auto;
+    }
+
+    .task-form, .task-list {
+        max-width: 90%;
+        margin: 0 auto 15px;
+    }
+
+    #select_button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #scroll {
+        width: 300px;
+        height: 350px;
+        top: 20px;
+    }
+
+    #VineHeart {
+        height: 250px;
+        top: 5px;
+    }
+}
+
+
+
+

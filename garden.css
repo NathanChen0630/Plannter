@@ -1,0 +1,83 @@
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 30 stretch;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevent body overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/soil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1{
+    color: rgb(0, 0, 0);
+    margin-top: 0;
+    background-image: url("images/plaque-gold.png");
+    background-position: center;
+    background-size: cover;
+    padding: 45px 80px;
+    text-align: center;
+    z-index: 1;
+}
+
+#select_button {
+    position: absolute;
+    bottom: 0px;
+    left: 43%;
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+#select_button:hover{
+    transform: scale(1.1);
+}
+
+#gardenGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    width: 100%; /* Take the full width */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 100px); /* Adjust based on header/footer height */
+    box-sizing: border-box;
+}
+
+.garden-flower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.flower-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.flower-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+

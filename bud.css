@@ -1,0 +1,104 @@
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 30 stretch;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    background-image: url(images/soil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 75px;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    background-image: url("images/plaque-gold.png");
+    background-position: center;
+    background-size: cover;
+    padding: 35px 60px;
+    font-size: 2em;
+    text-align: center;
+    position: absolute; 
+    top: 20px; 
+    z-index: 2;
+}
+
+table {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.flower-bud {
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+.flower-bud:hover {
+    transform: scale(1.5);
+}
+
+#select_button {
+    position: relative;
+    margin-top: 20px;
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+#select_button:hover {
+    transform: scale(1.1);
+}
+
+.gold-decor,
+.gold-decor2 {
+    position: absolute;
+    top: 10px;
+    transform: rotate(90deg);
+}
+
+.gold-decor {
+    left: 10px;
+}
+
+.gold-decor2 {
+    right: 10px;
+    transform: rotate(270deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 8px 30px;
+    }
+
+    .flower-bud {
+        height: 150px;
+    }
+
+    #select_button {
+        font-size: 1.2em;
+        width: 150px;
+        height: 45px;
+    }
+
+    .gold-decor,
+    .gold-decor2 {
+        top: 5px;
+    }
+}

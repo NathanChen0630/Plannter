@@ -1,0 +1,156 @@
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 30 stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/soil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 50px;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Styling for the back button */
+#select_button {
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+}
+
+#select_button:hover {
+    transform: scale(1.1) translateX(-50%);
+}
+
+/* Centered title styling */
+h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    background-image: url("images/plaque-gold.png");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+/* Flower grid layout */
+.flower-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+/* Flower pot styling */
+.flower-pot {
+    width: 150px;
+    height: 150px;
+    background-image: url("images/dirt_pot.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.flower-pot span {
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    bottom: 10px;
+}
+
+.flower-pot:hover {
+    transform: scale(1.2);
+}
+
+/* Gold corner decorations */
+.gold-decor, .gold-decor2 {
+    position: absolute;
+    top: 10px;
+    transform: rotate(90deg);
+}
+
+.gold-decor {
+    left: 10px;
+}
+
+.gold-decor2 {
+    right: 10px;
+    transform: rotate(270deg);
+}
+
+.flower-name {
+    color: black;
+    background-image: url("images/plaque-gold.png");
+    background-position: center;
+    background-size: cover;
+    padding: 8px;
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    #select_button {
+        width: 130px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .flower-grid {
+        gap: 15px;
+    }
+
+    .flower-pot {
+        width: 120px;
+        height: 120px;
+    }
+
+    .flower-name {
+        font-size: 12px;
+        padding: 6px;
+        width: 70px;
+    }
+    
+    #VineHeart {
+        height: 250px;
+        top: 5px;
+    }
+}

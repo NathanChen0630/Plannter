@@ -1,0 +1,227 @@
+body {
+    border: 50px solid transparent;
+    border-image: url('images/woodgrain-background-vector.jpg') 40 stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/soil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 50px;
+    height: 100vh;
+    width: 100vw;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    margin-top: 0;
+    background-image: url("images/plaque-gold.png");
+    background-position: center;
+    background-size: cover;
+    padding: 40px 60px;
+    font-size: 1.5em;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+}
+
+/* Task section styling */
+#task {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    padding: 15px;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    background-color: #fdf5e6;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: cursive;
+    font-size: 14px;
+    color: #333;
+    z-index: 10;
+}
+
+#taskList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#taskList li {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+#taskList li:hover {
+    transform: scale(1.2);
+}
+
+/* Back button styling */
+#select_button {
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+}
+
+#select_button:hover {
+    transform: scale(1.1) translateX(-50%);
+}
+
+/* Dirt pot styling */
+#dirtPot {
+    height: 250px;
+    width: 400px;
+    z-index: 2;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Flower image styling */
+#flowerImage {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+}
+
+/* Description box and scroll styling */
+.description-box {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 300px;
+    height: 400px;
+    padding: 35px;
+    font-family: cursive;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-image: url("images/paper scroll.webp");
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+/* Complete task button styling */
+.complete-task-button {
+    font-family: cursive;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.complete-task-button:hover {
+    background-color: rgb(50, 140, 70);
+    transform: scale(1.05);
+}
+
+.complete-task-button:disabled {
+    background-color: rgb(140, 140, 140);
+    cursor: not-allowed;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Garden button styling */
+#gardenButton {
+    position: absolute;
+    bottom: 50px;
+    z-index: 4;
+    font-family: cursive;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(69, 164, 93);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+#gardenButton:hover {
+    transform: scale(1.1);
+}
+
+#VineHeart {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    height: 350px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    #task {
+        top: 10%;
+        left: 5%;
+        width: 200px;
+    }
+
+    #select_button,
+    #gardenButton {
+        width: 130px;
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    #dirtPot {
+        width: 300px;
+        height: 200px;
+        bottom: 50px;
+    }
+
+    #flowerImage {
+        bottom: 180px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .description-box {
+        width: 250px;
+        height: 300px;
+        font-size: 14px;
+        top: 15%;
+        right: 5%;
+    }
+}
+
+
+
+
+
